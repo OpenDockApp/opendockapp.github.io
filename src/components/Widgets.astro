@@ -1,0 +1,8 @@
+---
+import { widgets } from '../data/site';
+---
+<section id="widgets" class="widgets-section section-space wrap">
+  <div class="section-heading reveal"><p class="eyebrow">SMALL WIDGETS. BIG DIFFERENCE.</p><h2>Less switching.<br /><span class="muted-heading">More living in the moment.</span></h2><p>Keep the things you reach for right where you need them.<br class="desktop-break" /> One glance. A little less friction.</p></div>
+  <div class="widget-grid">{widgets.map((widget, index) => <article class="widget-card reveal" style={`--delay: ${(index % 3) * 70}ms`}><span class:list={['widget-icon', widget.color]} aria-hidden="true">{widget.icon}</span><h3>{widget.name}</h3><p>{widget.text}</p><span class="card-index" aria-hidden="true">0{index + 1}</span></article>)}</div>
+  <p class="widget-footnote">And a little more: battery, upcoming meetings, and room to grow.</p>
+</section>

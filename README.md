@@ -1,43 +1,33 @@
-# Astro Starter Kit: Minimal
+# OpenDock website
+
+A responsive Astro landing page for OpenDock, styled with Tailwind CSS 4 and component-specific CSS. No client framework is required.
+
+## Develop
 
 ```sh
-bun create astro@latest -- --template minimal
+bun install
+bun run dev -- --background
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Manage the preview with `bun run astro dev status`, `bun run astro dev logs`, and `bun run astro dev stop`.
 
-## 🚀 Project Structure
+## Production
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+bun run build
+bun run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+The static site is generated in `dist/`. The canonical site URL is configured in `astro.config.mjs` for the root GitHub Pages domain.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Organization
 
-Any static assets, like images, can be placed in the `public/` directory.
+- `src/pages/index.astro` composes the page.
+- `src/layouts/Layout.astro` owns metadata and the shared shell.
+- `src/components/` contains independent page sections and the dock preview.
+- `src/data/site.ts` owns repository links and widget copy.
+- `src/styles/` contains global tokens, responsive layout, and dock styles.
+- `src/scripts/interactions.ts` handles progressive scroll reveals and accessible preset switching.
+- `public/images/` contains the actual app icon and supplied screenshot.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Content stays visible when JavaScript is disabled. Animations respect reduced motion. The download CTA leads to GitHub releases; it does not assume a published binary exists. Scripting and marketplace support are described as roadmap work.

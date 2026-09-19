@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+import ShaderBackground from './ShaderBackground.astro';
+import DockPreview from './DockPreview.astro';
+import { repository } from '../data/site';
+---
+<section class="hero wrap" aria-labelledby="hero-title">
+  <ShaderBackground />
+  <a class="eyebrow hero-badge" href={repository}><span class="status-dot"></span> A fresh perspective on your Mac <Icon size={14} /></a>
+  <h1 id="hero-title">A little dock.<br />A lot more <span class="serif-accent">you.</span></h1>
+  <p class="hero-description">Your time, your music, your little essentials.<br class="desktop-break" /> Together in one beautifully native dock.</p>
+  <div class="hero-actions flex items-center justify-center gap-4"><a href="#get-started" class="button button-primary">Meet your new dock <Icon /></a><a href={repository} class="text-link"><Icon name="github" size={18} /> Explore the code</a></div>
+  <p class="availability">Made for macOS 26+ <span>·</span> Free & open source</p>
+  <DockPreview />
+  <div class="hero-bottom"><span><span class="mini-star">✳</span> Native by nature.</span><span><span class="mini-star">✳</span> Personal by design.</span><span><span class="mini-star">✳</span> Open to everyone.</span></div>
+</section>

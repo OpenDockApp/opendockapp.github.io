@@ -1,0 +1,16 @@
+---
+import '../styles/dock.css';
+---
+<div class="demo-stage" id="dock-demo">
+  <div class="dock" aria-label="Interactive OpenDock layout preview">
+    <div class="dock-tile clock-tile"><span class="clock-time">09:41</span><span class="tile-muted">Saturday, September 19</span></div>
+    <div class="dock-tile date-tile"><span>SAT</span><strong>19</strong><small>Sep</small></div>
+    <div class="dock-tile apps-tile" aria-label="App launcher"><span class="app-icon safari">◈</span><span class="app-icon music">♫</span><span class="app-icon notes">≡</span><span class="app-icon finder">⌣</span></div>
+    <div class="dock-tile stats-tile"><div class="cpu-ring"><span class="chip">▧</span><strong>14<span>%</span></strong></div></div>
+    <div class="dock-tile focus-tile" hidden><span class="focus-symbol">◎</span><div><span class="tile-muted">Deep focus</span><strong>25:00</strong></div></div>
+    <div class="dock-tile playing-tile" hidden><span class="album-art">♫</span><div><strong>A little headspace</strong><span class="tile-muted">Your favorite soundtrack</span><span class="playback" aria-hidden="true">◂◂ &nbsp; Ⅱ &nbsp; ▸▸</span></div></div>
+  </div>
+  <div class="dock-shadow" aria-hidden="true"></div>
+</div>
+<div class="demo-controls" aria-label="Preview a dock layout"><span>Find your flow</span><div class="segmented" role="group" aria-label="Dock presets"><button type="button" data-preset="everyday" aria-pressed="true">Everyday</button><button type="button" data-preset="focus" aria-pressed="false">Deep work</button><button type="button" data-preset="creative" aria-pressed="false">Creative</button></div></div>
+<p class="sr-only" id="demo-status" role="status">Everyday layout: clock, date, app launcher, and system stats.</p>

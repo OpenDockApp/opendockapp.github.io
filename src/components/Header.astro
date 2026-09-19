@@ -1,0 +1,8 @@
+---
+import Icon from './Icon.astro';
+import { repository } from '../data/site';
+---
+<header class="site-header wrap flex items-center justify-between">
+  <a class="brand" href="#" aria-label="OpenDock home"><img class="brand-logo" src="/images/opendock-icon.png" width="39" height="39" alt="" />OpenDock<span class="beta">BETA</span></a>
+  <nav aria-label="Main navigation" class="flex items-center gap-8"><a class="nav-link" href="#widgets">Widgets</a><a class="nav-link" href="#your-dock">Make it yours</a><a class="nav-github" href={repository} aria-label="OpenDock on GitHub"><Icon name="github" /></a><a class="button button-small" href="#get-started">Get OpenDock <Icon size={15} /></a></nav>
+</header>

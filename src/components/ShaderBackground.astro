@@ -1,0 +1,8 @@
+<div class="shader-background" aria-hidden="true"><canvas class="hero-shader"></canvas></div>
+<script>import '../scripts/hero-shader';</script>
+<style>
+  .shader-background { position: absolute; inset: -30px calc((min(1160px, 100vw - 96px) - 100vw) / 2) 0; z-index: -2; pointer-events: none; overflow: hidden; background: radial-gradient(ellipse at 65% 55%, #dfebfb70, transparent 65%); mask-image: linear-gradient(transparent, black 15%, black 75%, transparent); }
+  canvas { width: 100%; height: 100%; display: block; opacity: .65; }
+  @media (max-width: 900px) { .shader-background { left: -24px; right: -24px; } }
+  @media (max-width: 640px) { .shader-background { left: -20px; right: -20px; } canvas { opacity: .5; } }
+</style>
