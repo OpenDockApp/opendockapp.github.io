@@ -31,3 +31,7 @@ The static site is generated in `dist/`. The canonical site URL is configured in
 - `public/images/` contains the actual app icon and supplied screenshot.
 
 Content stays visible when JavaScript is disabled. Animations respect reduced motion. The download CTA leads to GitHub releases; it does not assume a published binary exists. Scripting and marketplace support are described as roadmap work.
+
+## GitHub Pages
+
+`.github/workflows/deploy.yml` builds Astro with Node 24 and Bun, uploads the generated site, and deploys it on pushes to `main`. In the repository's **Settings → Pages**, the build source must be **GitHub Actions**, not **Deploy from a branch** (which runs Jekyll against the Astro source).
